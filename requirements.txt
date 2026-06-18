@@ -1,1 +1,6 @@
 streamlit
+pandas
+openpyxl
+json
+snowflake-connector-python
+snowflake-snowpark-python
