@@ -3,7 +3,7 @@ import json
 import streamlit as st
 import pandas as pd
 import snowflake.connector
-from snowflake. connector.pandas_tools import write_pandas
+#from snowflake. connector.pandas_tools import write_pandas
 
 
 def get_connection():
