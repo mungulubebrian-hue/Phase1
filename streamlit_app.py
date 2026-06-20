@@ -33,24 +33,6 @@ if not st.session_state.authenticated:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 from snowflake.connector.pandas_tools import write_pandas
 
 
