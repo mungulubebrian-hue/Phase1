@@ -3,6 +3,54 @@ import json
 import streamlit as st
 import pandas as pd
 import snowflake.connector
+
+# ---------------- LOGIN SECTION ----------------
+
+VALID_USERS = {
+    st.secrets["auth"]["username"]: st.secrets["auth"]["password"]
+}
+
+if "authenticated" not in st.session_state:
+    st.session_state.authenticated = False
+
+if not st.session_state.authenticated:
+    st.title("Login")
+
+    username = st.text_input("Username")
+    password = st.text_input("Password", type="password")
+
+    if st.button("Login"):
+        if username in VALID_USERS and VALID_USERS[username] == password:
+            st.session_state.authenticated = True
+            st.success("Login successful")
+            st.rerun()
+        else:
+            st.error("Invalid username or password")
+
+    st.stop()
+
+# ---------------- END LOGIN SECTION ----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 from snowflake.connector.pandas_tools import write_pandas
 
 
