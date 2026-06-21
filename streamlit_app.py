@@ -4,6 +4,26 @@ import streamlit as st
 import pandas as pd
 import snowflake.connector
 
+#### sidebar colour background
+st.markdown("""
+<style>
+
+[data-testid="stSidebar"] {
+    background: linear-gradient(
+        180deg,
+        #FF00FF 0%,
+        #CC00CC 100%
+    );
+}
+
+[data-testid="stSidebar"] * {
+    color: white;
+}
+
+</style>
+""", unsafe_allow_html=True)
+
+
 # ---------------- LOGIN SECTION ----------------
 
 VALID_USERS = {
