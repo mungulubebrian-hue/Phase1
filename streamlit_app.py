@@ -70,7 +70,7 @@ def clean_name(name):
 st.title("Upload CSV, Excel, or JSON Data to Snowflake")
 
 st.sidebar.markdown(
-    "Upload a CSV, Excel, or JSON file and save it to Snowflake."
+    "Upload a CSV, Excel, or JSON file and save it to Snowflake: Phase1."
 )
 
 uploaded_file = st.file_uploader(
